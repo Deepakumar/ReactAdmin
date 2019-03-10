@@ -3,6 +3,8 @@
 var React = require('react');
 var AuthorApi = require('../../api/authorApi');
 var AuthorList = require('../authors/authorList');
+var Router = require('react-router');
+var Link = Router.Link;
 
 var Authors = React.createClass({
     getInitialState: function() {
@@ -30,6 +32,7 @@ var Authors = React.createClass({
             <div>
                 <h1>Authors</h1>
                 <AuthorList authors={this.state.authors}/>
+                <Link to="addAuthor" className="btn btn-default">Add Author</Link>
             </div>
         );
     }
